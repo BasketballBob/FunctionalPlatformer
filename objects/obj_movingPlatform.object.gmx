@@ -33,6 +33,7 @@ image_speed = 0;
 depth = 1; //-1
 
 //Moving Platform variables
+drawSprite = spr_arrowPlatform;
 hSpeed = 4; //2
 
 //Tile Set Variables
@@ -40,6 +41,18 @@ width = floor(image_xscale);
 xp = 0;
 tileSize = 20;
 tileSprite = 0;
+
+//Change Sprite To Match Area
+//Mansion
+if(room == rm_levelFINALE || room == rm_level5)
+{
+    drawSprite = spr_arrowPlatform_5;
+}
+//Hive
+else if(room == rm_level4 || room == rm_interlude3)
+{
+    drawSprite = spr_arrowPlatform_4
+}
 
 /*
 for(xp = 0;xp &lt; width;xp++)
@@ -99,13 +112,13 @@ if(instance_exists(obj_player))
     {
         //sprite_index = -1;
         //image_index = 0;
-        sprite_index = spr_arrowPlatform;
+        sprite_index = object_get_sprite(object_index);
         //image_index = 1;
     }
 }
 
 //Kill If Offscreen
-if(x &gt; room_width+sprite_get_width(spr_arrowPlatform) || x &lt; 0-sprite_get_width(spr_arrowPlatform))
+if(x &gt; room_width+sprite_get_width(object_get_sprite(object_index)) || x &lt; 0-sprite_get_width(object_get_sprite(object_index)))
 {
     instance_destroy();
 }
@@ -132,7 +145,7 @@ if(x &gt; room_width+sprite_get_width(spr_arrowPlatform) || x &lt; 0-sprite_get_
           <argument>
             <kind>1</kind>
             <string>//Draw Sprite
-draw_sprite_ext(spr_arrowPlatform,image_index,x,y,image_xscale,image_yscale,0,c_white,1);
+draw_sprite_ext(drawSprite,image_index,x,y,image_xscale,image_yscale,0,c_white,1);
 </string>
           </argument>
         </arguments>

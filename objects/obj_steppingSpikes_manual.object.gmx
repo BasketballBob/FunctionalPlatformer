@@ -36,12 +36,22 @@ drawColor = c_white;
 triggerColor = make_color_rgb(248,100,100);
 triggered = false;
 spikeAlarm = 0;
-spikeDelay = 20; //30 //Time For Spike Warning
+spikeDelay = 10; //30 //Time For Spike Warning
 spikeCooldown = 20; //20 //Time For Spike Hitbox
 fadeIn = false;
 fadeAlarm = 60;
 fadeTime = fadeAlarm;
-spikeHeightOffSet = 4; //Starting Position Of Rising Spike
+spikeHeightOffSet = 7; //4; //Starting Position Of Rising Spike
+spikeRetreatAlarm = 0;
+locked = false;
+exiting = false;
+exitTrigger = false; //Only Allows Exit After Rise
+exitAlarm = 4;
+exitAlarmOffSet = -1;
+exitTime = exitAlarm;
+entering = true; //false;
+enterAlarm = 30;
+enterTime = enterAlarm;
 
 //Create Delay Array (For Smoother Animation)
 delayCount = 0;
@@ -87,8 +97,42 @@ colorRange = 255;
     triggered = true;
 }*/
 
+//Lock Spikes
+if(locked &amp;&amp; imageIndex == 2 &amp;&amp; sprite_index == spr_spikes)
+{  
+    exit;
+}
+
+//Enter Spikes
+if(entering &amp;&amp; enterAlarm &gt; 0)
+{
+    //Deduct Alarm
+    if(enterAlarm &gt; 0)
+    {
+        enterAlarm -= 1
+        exit;
+    }
+}
+
+//Exit Spikes
+if(exiting &amp;&amp; exitTrigger &amp;&amp; spikeAlarm == 0 &amp;&amp; spikeRetreatAlarm == 0)
+{
+    //Deduct Alarm
+    if(exitAlarm &gt; 0)
+    {
+        exitAlarm--;
+        exit;
+    }
+    //Destroy Instance
+    else
+    {
+        instance_destroy();
+        exit;
+    }
+}
+
 //Trigger Spikes Manually
-if(triggered)
+if(triggered &amp;&amp; spikeRetreatAlarm == 0)
 {
     spikeAlarm = spikeDelay+spikeCooldown;
     triggered = false;
@@ -118,6 +162,18 @@ if(spikeAlarm &gt; 0)
         sprite_index = spr_spikes;
         //drawColor = c_white; //triggerColor;
     }
+    
+    //Enable Spike Exit
+    if(exiting &amp;&amp; !exitTrigger)
+    {
+        exitTrigger = true;
+    }
+    
+    //Retreat Spikes
+    if(spikeAlarm == 0)
+    {
+        spikeRetreatAlarm = spikeDelay;
+    }
 }
 else
 {   
@@ -125,6 +181,20 @@ else
     sprite_index = -1;
     drawColor = c_white;
     triggered = false;
+}
+
+//Mange Spike Retreating
+if(spikeRetreatAlarm &gt; 0)
+{
+    imageIndex = 2;
+    sprite_index = -1;
+    spikeRetreatAlarm -= 1;
+    
+    //Change Sprite On Ending
+    if(spikeRetreatAlarm == 0)
+    {   
+        imageIndex = 0;
+    }
 }
 
 //Fading In
@@ -167,12 +237,25 @@ if(fadeIn)
           <argument>
             <kind>1</kind>
             <string>
+//Draw Entering Spike
+if(entering &amp;&amp; enterAlarm &gt; 0)
+{
+    //Determine Spike Height
+    spikeHeight = spikeHeightOffSet*((enterTime-enterAlarm)/enterTime);
+    
+    //Draw Spikes
+    draw_sprite_part(spr_spikes,0,0,0,sprite_get_width(spr_spikes),sprite_get_height(spr_spikes)-spikeHeightOffSet+spikeHeight,x,y+spikeHeightOffSet-spikeHeight);
+    
+    //Skip Other Draw Events
+    exit;
+}
+
 //Draw Partial Spike
 if(spikeAlarm &gt; spikeCooldown)
 {    
 
     //Debugging
-    show_debug_message("YEET");
+    /* show_debug_message("YEET");
     for(i = 0;i &lt; spikeDelay;i++)
     {
         spikeHeight = ((sprite_get_height(spr_spikes)-spikeHeightOffSet)*((delayCount-delayArray[i])/delayCount));
@@ -182,19 +265,39 @@ if(spikeAlarm &gt; spikeCooldown)
     {
         spikeHeight = ((sprite_get_height(spr_spikes)-spikeHeightOffSet)*((delayCount-delayArray[i])/delayCount));
         show_debug_message(spikeHeight);
-    }
+    }*/
     
     //Determine Spike Height
     spikeHeight = ((sprite_get_height(spr_spikes)-spikeHeightOffSet)*((delayCount-delayArray[spikeDelay-(spikeAlarm-spikeCooldown)])/delayCount));
     //spikeHeight = ((sprite_get_height(spr_spikes))*((delayCount-delayArray[spikeDelay-(spikeAlarm-spikeCooldown)])/delayCount));
     
     //Draw Spikes
-    draw_sprite_part(spr_spikes,imageIndex,0,0,sprite_get_width(spr_spikes),sprite_get_height(spr_spikes)+spikeHeightOffSet-spikeHeight,x,y+spikeHeight-spikeHeightOffSet);
+    draw_sprite_part(spr_spikes,imageIndex,0,0,sprite_get_width(spr_spikes),sprite_get_height(spr_spikes)*(1-((spikeHeight)/sprite_get_height(spr_spikes))),x,y+spikeHeight); //-spikeHeightOffSet);
     //draw_sprite_part(spr_spikes,imageIndex,0,0,sprite_get_width(spr_spikes),sprite_get_height(spr_spikes)-spikeHeight,x,y+spikeHeight);
     
     /*draw_sprite_part(spr_spikes,imageIndex,0,0,sprite_get_width(spr_spikes),
     sprite_get_height(spr_spikes)-(sprite_get_height(spr_spikes)*((spikeAlarm-spikeCooldown)/spikeDelay)),
     x,y+(sprite_get_height(spr_spikes)*((spikeAlarm-spikeCooldown)/spikeDelay)))*/
+}
+
+//Draw Retreating Spike 
+else if(spikeRetreatAlarm &gt; 0)
+{
+    //Determine Spike Height
+    spikeHeight = ((sprite_get_height(spr_spikes)-spikeHeightOffSet)*((delayCount-delayArray[spikeRetreatAlarm])/delayCount));
+    
+    //Draw Spikes
+    draw_sprite_part(spr_spikes,imageIndex,0,0,sprite_get_width(spr_spikes),sprite_get_height(spr_spikes)*(1-((spikeHeight)/sprite_get_height(spr_spikes))),x,y+spikeHeight);
+}
+
+//Draw Exiting Spike
+else if(exiting &amp;&amp; spikeAlarm == 0 &amp;&amp; exitAlarm &lt; exitTime+exitAlarmOffSet)
+{
+    //Determine Spike Height
+    spikeHeight = spikeHeightOffSet*(exitAlarm/exitTime);
+    
+    //Draw Spikes
+    draw_sprite_part(spr_spikes,0,0,0,sprite_get_width(spr_spikes),sprite_get_height(spr_spikes)-spikeHeightOffSet+spikeHeight,x,y+spikeHeightOffSet-spikeHeight);
 }
 
 //Draw Normal Sprite

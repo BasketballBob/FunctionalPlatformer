@@ -18,6 +18,11 @@
 global.checkPointRoom = room;
 global.checkPointId = noone;
 
+//Door Management Vars
+global.destEnabled = false;
+global.destX = 0;
+global.destY = 0;
+
 //Other Vars
 global.prevRoom = room; //Check fadeOutElevator to find creation of death transition</code>
   <enableViews>0</enableViews>

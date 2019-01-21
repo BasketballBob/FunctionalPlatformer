@@ -10,8 +10,10 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_travelerArea</sprite>
     <sprite>sprites\spr_towerWall</sprite>
     <sprite>sprites\spr_platform</sprite>
+    <sprite>sprites\spr_platform_invisible</sprite>
     <sprite>sprites\spr_obstacle</sprite>
     <sprite>sprites\spr_water</sprite>
     <sprite>sprites\spr_waterBase_aesthetic</sprite>
@@ -32,6 +34,10 @@
       <sprite>sprites\spr_shimmy</sprite>
       <sprite>sprites\spr_pizzaCutter</sprite>
       <sprite>sprites\spr_arrowPlatform</sprite>
+      <sprite>sprites\spr_arrowPlatform_4</sprite>
+      <sprite>sprites\spr_arrowPlatform_5</sprite>
+      <sprite>sprites\spr_arrowPlatform_big</sprite>
+      <sprite>sprites\spr_arrowPlatform_clamp</sprite>
       <sprite>sprites\spr_arrowPlatform2</sprite>
       <sprite>sprites\spr_electricity</sprite>
       <sprite>sprites\spr_electricityOrb</sprite>
@@ -44,6 +50,8 @@
       <sprite>sprites\spr_jumpPad_compressed</sprite>
       <sprite>sprites\spr_pendulum</sprite>
       <sprite>sprites\spr_pendulum_super</sprite>
+      <sprite>sprites\spr_yolkBullet</sprite>
+      <sprite>sprites\spr_bullet_crosshair</sprite>
     </sprites>
     <sprites name="Player">
       <sprite>sprites\spr_playerNeutral</sprite>
@@ -74,6 +82,7 @@
       <sprite>sprites\spr_leftoverMush2</sprite>
       <sprite>sprites\spr_winkStar</sprite>
       <sprite>sprites\spr_balloon</sprite>
+      <sprite>sprites\spr_bathroomDoor</sprite>
     </sprites>
     <sprites name="Characters">
       <sprite>sprites\spr_spiderLump</sprite>
@@ -88,6 +97,8 @@
       <sprite>sprites\spr_gingerBoy</sprite>
       <sprite>sprites\spr_nert</sprite>
       <sprite>sprites\spr_borp</sprite>
+      <sprite>sprites\spr_bip</sprite>
+      <sprite>sprites\spr_ed</sprite>
       <sprite>sprites\spr_kingCrowBerry</sprite>
       <sprite>sprites\spr_kingCrowBerry_confused</sprite>
       <sprite>sprites\spr_kingCrowBerry_suprised</sprite>
@@ -107,6 +118,10 @@
       <sprite>sprites\spr_leverArm</sprite>
       <sprite>sprites\spr_lever</sprite>
       <sprite>sprites\spr_pendulumWarning</sprite>
+      <sprite>sprites\spr_airship</sprite>
+      <sprite>sprites\spr_airship_wire</sprite>
+      <sprite>sprites\spr_airship_yolkchild</sprite>
+      <sprite>sprites\spr_airship_gun</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -115,6 +130,7 @@
     <background>background\bg_tower3</background>
     <background>background\bg_tower4</background>
     <background>background\bg_tower5</background>
+    <background>background\bg_bathroom</background>
     <background>background\bg_stormyNight</background>
     <background>background\bg_elevatorShell</background>
     <background>background\bg_elevatorShell2</background>
@@ -131,17 +147,22 @@
     <background>background\bg_elevator4</background>
     <background>background\bg_window</background>
     <background>background\bg_window2</background>
+    <background>background\bg_window5</background>
     <background>background\bg_towerTile</background>
     <background>background\bg_towerTile1</background>
     <background>background\bg_towerTile2</background>
     <background>background\bg_towerTile_3</background>
     <background>background\bg_towerTile4</background>
+    <background>background\bg_towerTile_bathroom</background>
     <background>background\bg_towerTile3</background>
     <background>background\bg_tutorialDoor</background>
     <background>background\bg_elevatorDoor</background>
     <background>background\bg_openElevatorDoor</background>
     <background>background\bg_exitSign</background>
     <background>background\bg_platformTile</background>
+    <background>background\bg_platformTile_2</background>
+    <background>background\bg_platformTile_4</background>
+    <background>background\bg_platformTile_5</background>
     <backgrounds name="Decoration">
       <background>background\bg_sign1</background>
       <background>background\bg_sign0</background>
@@ -159,35 +180,79 @@
       <background>background\bg_fencePost</background>
       <background>background\bg_wallCrack0</background>
       <background>background\bg_winnerPoster</background>
-      <backgrounds name="Sea Decorations">
-        <background>background\bg_seaDecor_0</background>
-        <background>background\bg_seaDecor_1</background>
-        <background>background\bg_seaDecor_2</background>
-        <background>background\bg_seaDecor_3</background>
-        <background>background\bg_seaDecor_4</background>
-        <background>background\bg_seaDecor_5</background>
-        <background>background\bg_seaDecor_6</background>
-        <background>background\bg_seaDecor_7</background>
-        <background>background\bg_seaDecor_8</background>
-        <background>background\bg_seaColor_9</background>
-        <background>background\bg_seaDecor_10</background>
-        <background>background\bg_seaDecor_11</background>
-        <background>background\bg_seaDecor_12</background>
-        <background>background\bg_seaDecor_13</background>
-      </backgrounds>
-      <backgrounds name="Forest Decorations">
-        <background>background\bg_mainForestDecor_0</background>
-        <background>background\bg_forestDecor_0</background>
-        <background>background\bg_forestDecor_1</background>
-        <background>background\bg_forestDecor_2</background>
-        <background>background\bg_forestDecor_3</background>
-        <background>background\bg_forestDecor_4</background>
-        <background>background\bg_forestDecor_5</background>
-        <background>background\bg_forestDecor_6</background>
-        <background>background\bg_forestDecor_7</background>
-        <background>background\bg_forestDecor_8</background>
-        <background>background\bg_forestDecor_9</background>
-      </backgrounds>
+    </backgrounds>
+    <backgrounds name="Sea Decorations">
+      <background>background\bg_mainSeaDecor_0</background>
+      <background>background\bg_mainSeaDecor_1</background>
+      <background>background\bg_seaDecor_0</background>
+      <background>background\bg_seaDecor_1</background>
+      <background>background\bg_seaDecor_2</background>
+      <background>background\bg_seaDecor_3</background>
+      <background>background\bg_seaDecor_4</background>
+      <background>background\bg_seaDecor_5</background>
+      <background>background\bg_seaDecor_6</background>
+      <background>background\bg_seaDecor_7</background>
+      <background>background\bg_seaDecor_8</background>
+      <background>background\bg_seaColor_9</background>
+      <background>background\bg_seaDecor_10</background>
+      <background>background\bg_seaDecor_11</background>
+      <background>background\bg_seaDecor_12</background>
+      <background>background\bg_seaDecor_13</background>
+    </backgrounds>
+    <backgrounds name="Forest Decorations">
+      <background>background\bg_mainForestDecor_0</background>
+      <background>background\bg_forestDecor_0</background>
+      <background>background\bg_forestDecor_1</background>
+      <background>background\bg_forestDecor_2</background>
+      <background>background\bg_forestDecor_3</background>
+      <background>background\bg_forestDecor_4</background>
+      <background>background\bg_forestDecor_5</background>
+      <background>background\bg_forestDecor_6</background>
+      <background>background\bg_forestDecor_7</background>
+      <background>background\bg_forestDecor_8</background>
+      <background>background\bg_forestDecor_9</background>
+      <background>background\bg_forestDecor_10</background>
+      <background>background\bg_forestDecor_11</background>
+    </backgrounds>
+    <backgrounds name="Hive Decorations">
+      <background>background\bg_mainHiveDecor_0</background>
+      <background>background\bg_hiveDecor_0</background>
+      <background>background\bg_hiveDecor_1</background>
+      <background>background\bg_hiveDecor_2</background>
+      <background>background\bg_hiveDecor_3</background>
+      <background>background\bg_hiveDecor_4</background>
+      <background>background\bg_hiveDecor_5</background>
+      <background>background\bg_hiveDecor_6</background>
+      <background>background\bg_hiveDecor_7</background>
+      <background>background\bg_hiveDecor_8</background>
+      <background>background\bg_hiveDecor_9</background>
+      <background>background\bg_hiveDecor_10</background>
+    </backgrounds>
+    <backgrounds name="Mansion Decorations">
+      <background>background\bg_mainMansionDecor_0</background>
+      <background>background\bg_mainMansionDecor_1</background>
+      <background>background\bg_mansionDecor_0</background>
+      <background>background\bg_mansionDecor_1</background>
+      <background>background\bg_mansionDecor_2</background>
+      <background>background\bg_mansionDecor_3</background>
+      <background>background\bg_mansionDecor_4</background>
+      <background>background\bg_mansionDecor_5</background>
+      <background>background\bg_mansionDecor_6</background>
+      <background>background\bg_mansionDecor_7</background>
+      <background>background\bg_mansionDecor_8</background>
+      <background>background\bg_mansionDecor_9</background>
+      <background>background\bg_mansionDecor_10</background>
+      <background>background\bg_mansionDecor_11</background>
+      <background>background\bg_mansionDecor_12</background>
+    </backgrounds>
+    <backgrounds name="Bathroom Decorations">
+      <background>background\bg_bathroomStall</background>
+      <background>background\bg_bathroomToilet</background>
+      <background>background\bg_bathroomToilet_front</background>
+      <background>background\bg_bathroomUrinal</background>
+      <background>background\bg_bathroom_sink</background>
+      <background>background\bg_bathroomDoor</background>
+      <background>background\bg_bathroomDoor_exit</background>
     </backgrounds>
     <backgrounds name="Paintings">
       <background>background\bg_painting0</background>
@@ -201,6 +266,7 @@
   <scripts name="scripts">
     <script>scripts\scr_cameraConstruct.gml</script>
     <script>scripts\scr_cameraControl.gml</script>
+    <script>scripts\scr_obstacleManager.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_playerFont</font>
@@ -213,13 +279,20 @@
     <object>objects\obj_towerWall3</object>
     <object>objects\obj_towerWall4</object>
     <object>objects\obj_towerWall5</object>
+    <object>objects\obj_bathroomWall</object>
     <object>objects\obj_platform</object>
+    <object>objects\obj_platform_0</object>
+    <object>objects\obj_platform_2</object>
+    <object>objects\obj_platform_4</object>
+    <object>objects\obj_platform_5</object>
+    <object>objects\obj_platform_invisible</object>
     <object>objects\obj_water</object>
     <object>objects\obj_player</object>
     <object>objects\obj_verticalWaterGUI</object>
     <object>objects\obj_checkPoint</object>
     <object>objects\obj_spawner</object>
     <objects name="Context Specific">
+      <object>objects\obj_roomTraveler</object>
       <object>objects\obj_elevatorDoor</object>
       <object>objects\obj_NextRoom</object>
       <object>objects\obj_interludeAesthetic</object>
@@ -231,6 +304,7 @@
       <object>objects\obj_knob</object>
       <object>objects\obj_faucet</object>
       <object>objects\obj_droplet</object>
+      <object>objects\obj_bathroomDoor</object>
       <object>objects\obj_sneakyWall2</object>
       <object>objects\obj_destructableWallGenerator</object>
       <object>objects\obj_destructableWall</object>
@@ -257,6 +331,8 @@
       <object>objects\obj_movingPlatformSpawner</object>
       <object>objects\obj_movingPlatform</object>
       <object>objects\obj_movingPlatform_balloon</object>
+      <object>objects\obj_movingPlatform_boss</object>
+      <object>objects\obj_movingPlatform_boss_deploy</object>
       <object>objects\obj_ridingPlatform</object>
       <object>objects\obj_steppingSpikes</object>
       <object>objects\obj_steppingSpikes_manual</object>
@@ -268,11 +344,15 @@
       <object>objects\obj_pendulum_super</object>
       <object>objects\obj_yolkBoss</object>
       <object>objects\obj_yolkBoss_slam</object>
+      <object>objects\obj_yolkBoss_crossHair</object>
+      <object>objects\obj_yolkBoss_bullet</object>
+      <object>objects\obj_yolkBoss_bullet_arc</object>
     </objects>
     <objects name="Conversants">
       <object>objects\obj_conversation</object>
       <object>objects\obj_conversant</object>
       <object>objects\obj_spiderLump</object>
+      <object>objects\obj_ed</object>
       <object>objects\obj_misterIntercom</object>
       <object>objects\obj_pushPinPete</object>
       <object>objects\obj_emptyElevatorDelay</object>
@@ -289,6 +369,7 @@
       <object>objects\obj_gingerBoy_short</object>
       <object>objects\obj_nert</object>
       <object>objects\obj_borp_short</object>
+      <object>objects\obj_bip_short</object>
       <object>objects\obj_kingCrowBerry</object>
       <object>objects\obj_gourdon1_short</object>
       <object>objects\obj_gourdon_running</object>
@@ -310,11 +391,15 @@
       <object>objects\obj_reactiveBullet</object>
       <object>objects\obj_verticalMovingPlatform</object>
       <object>objects\obj_verticalMovingPlatform2_up_</object>
+      <object>objects\obj_platform_OG</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_initialization</room>
     <room>rooms\rm_fightFINAL</room>
+    <room>rooms\rm_interlude3</room>
+    <room>rooms\rm_level3</room>
+    <room>rooms\rm_interlude_bathroom</room>
     <room>rooms\rm_tutorial_intro4</room>
     <room>rooms\rm_level1</room>
     <room>rooms\rm_elevator1</room>
@@ -328,12 +413,10 @@
     <room>rooms\rm_elevator5</room>
     <room>rooms\rm_level4</room>
     <room>rooms\rm_elevator6</room>
-    <room>rooms\rm_interlude3</room>
     <room>rooms\rm_elevator7</room>
     <room>rooms\rm_level5</room>
     <room>rooms\rm_elevator8</room>
     <room>rooms\rm_levelFINALE</room>
-    <room>rooms\rm_level3</room>
     <room>rooms\rm_intro3</room>
   </rooms>
   <help>

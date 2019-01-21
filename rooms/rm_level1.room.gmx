@@ -58,29 +58,29 @@ instance_create(x,y,obj_fadeOutElevator);</code>
     <instance objName="obj_towerWall" x="20" y="2860" name="inst_5DB302B1" locked="0" code="" scaleX="30" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall" x="620" y="0" name="inst_E24FB593" locked="0" code="" scaleX="1" scaleY="144" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall" x="20" y="2780" name="inst_3877C083" locked="0" code="" scaleX="30" scaleY="4" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="280" y="2680" name="inst_1AB0FC1C" locked="0" code="" scaleX="17" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="20" y="2600" name="inst_A9F3D0E1" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="20" y="2520" name="inst_5CD6A6E6" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="180" y="2440" name="inst_6CD01078" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="340" y="2440" name="inst_A93F04DE" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="280" y="2680" name="inst_1AB0FC1C" locked="0" code="" scaleX="17" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="20" y="2600" name="inst_A9F3D0E1" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="20" y="2520" name="inst_5CD6A6E6" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="180" y="2440" name="inst_6CD01078" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="340" y="2440" name="inst_A93F04DE" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall" x="20" y="2680" name="inst_C319221C" locked="0" code="" scaleX="13" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="obj_saw" x="240" y="2680" name="inst_49F69B62" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_saw" x="40" y="2680" name="inst_35F5C2BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall" x="460" y="2440" name="inst_0723E51B" locked="0" code="" scaleX="8" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall" x="540" y="2380" name="inst_EA357422" locked="0" code="" scaleX="4" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall" x="20" y="2280" name="inst_3FC5BC11" locked="0" code="" scaleX="26" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="540" y="2280" name="inst_16B6679E" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="540" y="2280" name="inst_16B6679E" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_shooter" x="-20" y="2260" name="inst_D6B57766" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="20" y="2520" name="inst_D8B277BE" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="20" y="2440" name="inst_88C066C8" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="20" y="2220" name="inst_CB9AE488" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="20" y="2140" name="inst_5B8E9587" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="20" y="2060" name="inst_F25E4069" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="20" y="2520" name="inst_D8B277BE" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="20" y="2440" name="inst_88C066C8" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="20" y="2220" name="inst_CB9AE488" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="20" y="2140" name="inst_5B8E9587" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="20" y="2060" name="inst_F25E4069" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_shooter" x="660" y="2040" name="inst_03CF7859" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="540" y="2000" name="inst_07AD51BA" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="420" y="2000" name="inst_1A352E23" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="560" y="1900" name="inst_4C926447" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="420" y="1820" name="inst_CF5554A8" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="540" y="2000" name="inst_07AD51BA" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="420" y="2000" name="inst_1A352E23" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="560" y="1900" name="inst_4C926447" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="420" y="1820" name="inst_CF5554A8" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_saw" x="400" y="1820" name="inst_08CD56E6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall" x="160" y="2060" name="inst_2AE42136" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall" x="300" y="2060" name="inst_94226896" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
@@ -88,30 +88,30 @@ instance_create(x,y,obj_fadeOutElevator);</code>
     <instance objName="obj_towerWall" x="20" y="1820" name="inst_89CF9FE5" locked="0" code="" scaleX="11" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_saw" x="160" y="1740" name="inst_718C8DC7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_saw" x="40" y="1800" name="inst_6E162DF7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="20" y="1720" name="inst_312DFADF" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="20" y="1620" name="inst_3B8545D4" locked="0" code="" scaleX="8" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="20" y="1720" name="inst_312DFADF" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="20" y="1620" name="inst_3B8545D4" locked="0" code="" scaleX="8" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_saw" x="20" y="1620" name="inst_B9BEA940" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_saw" x="180" y="1620" name="inst_DB2B4367" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall" x="140" y="1520" name="inst_1C633450" locked="0" code="" scaleX="24" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_shooter" x="660" y="1500" name="inst_BFD6B023" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall" x="240" y="1360" name="inst_86C2BFA0" locked="0" code="" scaleX="1" scaleY="6" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall" x="440" y="1360" name="inst_D3F69A2F" locked="0" code="" scaleX="1" scaleY="6" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="580" y="1440" name="inst_2E17CEAE" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="460" y="1380" name="inst_9B66BC40" locked="0" code="" scaleX="8" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="580" y="1440" name="inst_2E17CEAE" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="460" y="1380" name="inst_9B66BC40" locked="0" code="" scaleX="8" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_basketball" x="340" y="1260" name="inst_F99E4501" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall" x="20" y="1300" name="inst_296FDBB0" locked="0" code="" scaleX="22" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_basketball" x="160" y="1260" name="inst_A9CDCF11" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="20" y="1200" name="inst_DE91FE1B" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="20" y="1100" name="inst_027E5B0B" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="20" y="1200" name="inst_DE91FE1B" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="20" y="1100" name="inst_027E5B0B" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall" x="140" y="1060" name="inst_B21F1286" locked="0" code="" scaleX="5" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall" x="480" y="980" name="inst_3E8400D1" locked="0" code="" scaleX="5" scaleY="7" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall" x="300" y="1020" name="inst_02B4B137" locked="0" code="" scaleX="6" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="obj_basketball" x="360" y="1000" name="inst_CD955544" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_saw" x="560" y="980" name="inst_5010EA6B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_saw" x="140" y="1080" name="inst_B2216E5F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="580" y="920" name="inst_FAE91605" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="580" y="840" name="inst_BE416FDB" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="580" y="760" name="inst_0DEC931F" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="580" y="920" name="inst_FAE91605" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="580" y="840" name="inst_BE416FDB" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="580" y="760" name="inst_0DEC931F" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall" x="360" y="720" name="inst_18DDDEC4" locked="0" code="" scaleX="8" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall" x="20" y="660" name="inst_548FA6E1" locked="0" code="" scaleX="9" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_basketball" x="120" y="640" name="inst_0B46CF0E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -120,17 +120,17 @@ instance_create(x,y,obj_fadeOutElevator);</code>
     <instance objName="obj_saw" x="220" y="700" name="inst_EA68F6B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_saw" x="540" y="740" name="inst_91FB6971" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_saw" x="280" y="720" name="inst_5684521E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="20" y="560" name="inst_5B1C92BE" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="20" y="560" name="inst_5B1C92BE" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall" x="260" y="660" name="inst_B49E60A4" locked="0" code="" scaleX="2" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obj_saw" x="220" y="640" name="inst_7E7179D4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall" x="100" y="460" name="inst_6EF04951" locked="0" code="" scaleX="26" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="20" y="460" name="inst_6578F076" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="20" y="460" name="inst_6578F076" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_shooter" x="660" y="440" name="inst_A37DD4A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_saw" x="140" y="440" name="inst_BD355A31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_saw" x="380" y="440" name="inst_F3BB5644" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="540" y="360" name="inst_22B4458F" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="460" y="260" name="inst_CD39AC21" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="180" y="160" name="inst_7241F1F8" locked="0" code="" scaleX="14" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="540" y="360" name="inst_22B4458F" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="460" y="260" name="inst_CD39AC21" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="180" y="160" name="inst_7241F1F8" locked="0" code="" scaleX="14" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_elevatorDoor" x="200" y="60" name="inst_883CDF3C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_checkPoint" x="500" y="1340" name="inst_EE3E3637" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_gourdon_running" x="480" y="2280" name="inst_9A17D3F8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

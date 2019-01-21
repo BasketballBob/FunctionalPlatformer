@@ -36,6 +36,9 @@ ogY = view_yview[0];
 x = ogX; //ogX;
 y = ogY;
 
+//Modifiable Variables
+destRoom = room_next(room);
+
 //Transition Variables
 xOff = -view_wview[0]/2;
 //yOff = 0;
@@ -45,6 +48,9 @@ moveDelay = 4;
 moveAlarm = 0;
 moveDist = view_wview[0]/2;
 deathTime = 30;
+
+
+
 </string>
           </argument>
         </arguments>
@@ -184,9 +190,10 @@ else
     }
     else
     {   
-        if(room_exists(room_next(room)))
+        if(room_exists(destRoom))
         {
-            room_goto_next();
+            //room_goto_next();
+            room_goto(destRoom);
         }
     }
 }

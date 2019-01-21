@@ -32,9 +32,9 @@ depth = -5;
 waterSprite = spr_waterBase_aesthetic;
 waterY = 340;
 waterOGY = waterY;
-waterAlpha = .5;
-waterVSpeed = 1;
-waterVRate = .25;
+waterAlpha = .5; //.5
+waterVSpeed = .5; //1
+waterVRate = .125; //.25
 waterAlarm = 0;
 waterTime = 2;
 </string>
@@ -90,6 +90,9 @@ for(i = 0;i &lt; waterCount;i++)
 {
     draw_sprite_ext(waterSprite,0,waterWidth*i,round(waterY),1,1,0,c_white,waterAlpha);
 }
+
+//Draw Water Base
+draw_sprite_ext(spr_waterBase,0,0,round(waterY)+sprite_get_height(waterSprite),room_width/waterWidth,(room_height-round(waterY))/sprite_get_height(waterSprite),0,c_white,waterAlpha);
 </string>
           </argument>
         </arguments>

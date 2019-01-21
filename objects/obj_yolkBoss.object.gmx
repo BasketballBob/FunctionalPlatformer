@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//Basic Variables
-
+depth = 1.1; //0
 
 //Yolk Boss Variables
 
@@ -35,6 +35,18 @@ currentAttack = -1;
 attackRange = 2;
 attackInitialized = false;
 attackTimer = -1;
+
+//Attack Types
+//0 - Rocket Barrage
+//1 - Bobbing Chainsaws
+//2 - Spike Stomp
+
+//Boss Attack Array
+attackPos = 0;
+bossAttack[0] = 0;
+bossAttack[1] = 1;
+bossAttack[2] = 2;
+
 
 //Boss Character Variables
 bossDeployed = false;
@@ -84,7 +96,22 @@ leverRSpeed = 0;
 leverRRate = .25;
 leverRAngle = 43;
 
-
+//Airship Deployment Variables
+shipDeployed = true;
+shipBobbing = false;
+shipVSpeed = 0;
+shipVRate = .05; //
+shipInitialVSpeed = shipVRate*25;
+shipXOffSet1 = 300; //320
+shipXOffSet2 = 340;
+shipX = 0;
+shipY = -100;
+shipY1 = -100;
+shipY2 = 200;
+//tinyBossX = 250; Currently Unused
+tinyBossY = 25; //225
+gunXOffSet = 30;
+gunYOffSet = 30;
 
 
 
@@ -118,7 +145,18 @@ if(currentAttack == -1)
 {
     //Determine New  Attack
     //currentAttack = irandom_range(0,attackRange-1);
-    currentAttack = 2;
+    currentAttack = 4; //2
+    
+    //Determine New Attack With Array
+    /*if(attackPos-1 &lt; array_length_1d(bossAttack))
+    {
+        currentAttack = bossAttack[attackPos];
+        attackPos++;
+    }
+    else
+    {
+        currentAttack = -1;
+    }*/
     
     //Reset Attack Timer
     attackTimer = 0;
@@ -296,7 +334,7 @@ if(currentAttack != -1)
         else if(attackTimer == 940)
         {
             currentAttack = -1;
-            obj_player.image_xscale = 15;
+            //obj_player.image_xscale = 15;
         }
         
         
@@ -503,28 +541,78 @@ if(currentAttack != -1)
             spikeSlidePos = 0;
             
             spikeSlam = false;
+            fastSpikeSlam = false;
+            fastVRate = .75;
             prevSpikeSlam = false;
             slamPhase = 0;
             slamAlarm = 0;
             slamX1 = 0+60;
             slamX2 = room_width-60;
             slamY1 = -sprite_get_height(spr_yolkChild_slam);
-            slamY2 = 180;
+            slamY2 = 160;
             slamHoverY = slamY1+100;
             //slamHoverAlarm = 30;
             //slamHoverTime = slamHoverAlarm;
-            slamX = 0;
+            slamX = -1;
+            slamPlayerDist = 150;
             slamY = slamY1;
             slamVSpeed = 0;
-            slamVRate = .25;   
+            slamVRate = .25;  //.25
+            slamTpAlarm = 0;
+            slamTpTime = 15;
+            slamAttack = false;
+            slamAttackAlarm = 0;
+            slamAttackTime = 150;
             
             shockWave = false;
             prevShockWave = false;
             shockWaveStartPos = 0;    
             shockWavePos = 0;
             shockWaveAlarm = 0;
-            shockWaveDelay = 2;    
+            shockWaveDelay = 2; //2
             
+            platformSpawn = false;
+            platformX = sprite_get_width(spr_arrowPlatform)/2;
+            platformY1 = 170;
+            platformY2 = 260;
+            //platformSpawnDir = 1;
+            platformAlarm = 0;
+            platformDelay = 45; //55
+            
+            platformSpeed = 0;
+            platformSpeedCap = 6; //5
+            platformRate = 1;
+            platformDir = 0;
+            platformSpeedAlarm = 0;
+            platformSpeedDelay = 20;
+            
+            spikeLock = false;
+            prevSpikeLock = false;
+            
+            finalSlamAlarm = 30;
+            spikeExit = false;
+            prevSpikeExit = false;
+            
+            //Platform Array (Y)
+            platArrayPos = 0;
+            platArray[0] = 270;
+            platArray[1] = 230;
+            platArray[2] = 190;
+            platArray[3] = 260;
+            platArray[4] = 220;
+            platArray[5] = 240;
+            platArray[6] = 200;
+            platArray[7] = 150;
+            platArray[8] = 220;
+            platArray[9] = 240;
+            //platArray[10] = 200;
+            //platArray[11] = 150;
+            //platArray[12] = 200;
+            //platArray[13] = 150;
+            //platArray[14] = 200;
+            //platArray[15] = 150;
+            
+            spikeEnd = false;
             attackInitialized = true;
             
             //Create Slam Instance
@@ -538,20 +626,85 @@ if(currentAttack != -1)
             }
         }
         
-        //Spike Slide Attack 0
+        //Final atttack sequence
         if(attackTimer == 150)
         {
-            //spikeSlide = true;
-            //spikeSlideDir = 1;
-            spikeSlam = true;
+            //spikeSlam = true;
+            slamAttack = true;
         }
-        else if(attackTimer == 550)
+        else if(attackTimer == 350)
         {
-            //spikeSlide = true;
-            //spikeSlideDir = -1;
-            spikeSlam = true;
+            //spikeSlam = true;
+            slamAttack = true;
+            slamAttackTime = 100;
+            slamVRate = .5;
         }
+        else if(attackTimer == 580)
+        {
+            slamAttack = false;
+            //platformSpawn = true;
+        }
+        else if(attackTimer == 660)
+        {
+            instance_create(round((.7/3)*room_width),260,obj_movingPlatform_boss_deploy);
+            instance_create(round((2.3/3)*room_width),260,obj_movingPlatform_boss_deploy);
+        }
+        else if(attackTimer == 740)
+        {
+            spikeSlam = true;
+            slamX = room_width/2;
+            spikeLock = true;
+        }
+        else if(attackTimer == 890)
+        {
+            bossDeployed = true;
+            bossDX = room_width/2;
+        }
+        else if(attackTimer == 985)
+        {
+            armDeployed = true;
+        }
+        else if(attackTimer == 1030)
+        {
+            armLaunchLid = true;
+        }
+        else if(attackTimer == 1130)
+        {
+            //Move Platforms Opposite Direction Of Player
+            if(obj_player.x &gt; room_width/2)
+            {
+                platformDir = 1;
+                leverDR = -leverRAngle;
+                //instance_create(0-platformX,260,obj_movingPlatform_boss);
+            }
+            else 
+            {   
+                platformDir = -1;
+                leverDR = leverRAngle;
+                //instance_create(room_width+platformX,260,obj_movingPlatform_boss);               
+            }
+        }
+        else if(attackTimer == 1131)
+        {
+            platformSpawn = true;
+        }
+    
         
+        //Slam Attack Manager (System)
+        if(slamAttack)
+        {
+            //Manage Alarm
+            if(slamAttackAlarm &gt; 0)
+            {
+                slamAttackAlarm -= 1;
+            }
+            //Attack
+            else
+            {
+                spikeSlam = true;
+                slamAttackAlarm = slamAttackTime;
+            }
+        }
         
         //Slam Attack (System)
         if(spikeSlam)
@@ -560,7 +713,17 @@ if(currentAttack != -1)
             if(spikeSlam != prevSpikeSlam)
             {
                 //Determine Attack Position
-                slamX = obj_player.x;
+                if(slamVRate == .25)//First Attack
+                {
+                    slamX = obj_player.x;
+                }
+                else if(slamX == -1)//Near Player
+                {
+                    //slamX = obj_player.x;
+                    slamX = irandom_range(obj_player.x-slamPlayerDist,obj_player.x+slamPlayerDist);
+                }
+                
+                //Clamp SlamX
                 if(slamX &lt; slamX1) slamX = slamX1;
                 else if(slamX &gt; slamX2) slamX = slamX2;   
                 
@@ -577,6 +740,12 @@ if(currentAttack != -1)
                     }
                 }
                 
+                //Round SlamInst Pos To Closest Spike
+                if(slamX != room_width/2)
+                {
+                    slamX = spikeArray[closestSpike].x+7; 
+                }
+                
                 //Initialize Hovering Vars
                 //slamHoverAlarm = slamHoverTime;  
                 
@@ -591,21 +760,45 @@ if(currentAttack != -1)
             //Hover Down
             else if(slamPhase == 0)
             {                
+                //Set Image
+                slamInst.imageIndex = 0;
+                slamInst.sprite_index = slamInst.slamSprite;
+                
+                //Fast Slam Attack
+                /*if(fastSpikeSlam)
+                {
+                    slamPhase++
+                }*/
+                
                 //Hovering Down
-                if(slamY+slamVSpeed+slamVRate &lt; slamHoverY)
+                if(true)
                 {
-                    slamVSpeed += slamVRate;
-                    slamY += slamVSpeed;
+                    if(slamY+slamVSpeed+slamVRate &lt; slamHoverY)
+                    {
+                        slamVSpeed += slamVRate;
+                        slamY += slamVSpeed;
+                    }
+                    //Hovered Down
+                    else
+                    {
+                        slamVSpeed = slamVRate*6;
+                        slamY = slamHoverY
+                        slamAlarm = 20;
+                        slamPhase++;
+                        
+                        //First Spike Slam
+                        if(slamVRate == .25)
+                        {
+                            slamVSpeed = 0;
+                        }
+                        //Fast Spike Slam
+                        else if(fastSpikeSlam)
+                        {
+                            slamAlarm = 20;
+                            slamVSpeed = slamVRate*8;
+                        }
+                    }                                
                 }
-                //Hovered Down
-                else
-                {
-                    slamVSpeed = 0;
-                    slamY = slamHoverY
-                    slamAlarm = 20;
-                    slamPhase++;
-                }
-                                
             }
             //Follow Player
             /*else if(slamPhase == 1)
@@ -630,8 +823,18 @@ if(currentAttack != -1)
             //Drop Down
             else if(slamPhase == 1)
             {
+                //Set Image
+                slamInst.imageIndex = 1;
+                slamInst.sprite_index = slamInst.slamSprite;
+                
+                //Fast Dropping
+                if(slamY+slamVSpeed+fastVRate &lt; slamY2)
+                {
+                    slamVSpeed += fastVRate;
+                    slamY += slamVSpeed;
+                }
                 //Dropping
-                if(slamY+slamVSpeed+slamVRate &lt; slamY2)
+                else if(slamY+slamVSpeed+slamVRate &lt; slamY2)
                 {
                     slamVSpeed += slamVRate;
                     slamY += slamVSpeed;
@@ -646,34 +849,74 @@ if(currentAttack != -1)
                     //Modify Slam Vars
                     slamVSpeed = 0;
                     slamY = slamY2;
-                    slamAlarm = 30;
+                    slamTpAlarm = slamTpTime;
+                    slamAlarm = 20;
                     slamPhase++;
                 }
             }            
             //Retract Upwards
             else if(slamPhase == 2)
             {
-                //Ascending
-                if(slamY+slamVSpeed-slamVRate &gt; slamY1)
+                //Set Image
+                slamInst.imageIndex = 0;
+                slamInst.sprite_index = -1;
+            
+                //Normal Ascension
+                if(true) //!fastSpikeSlam)
                 {
-                    slamVSpeed -= slamVRate;
-                    slamY += slamVSpeed;
-                }                
-                //Ascended
-                else
+                    //Ascending
+                    if(slamY+slamVSpeed-slamVRate &gt; slamY1)
+                    {
+                        slamVSpeed -= slamVRate;
+                        slamY += slamVSpeed;
+                    }                
+                    //Ascended
+                    else
+                    {
+                        slamVSpeed = 0;
+                        slamY = slamY1;
+                        slamPhase++;
+                    } 
+                }
+                
+                //Fast Ascension
+                if(fastSpikeSlam)
                 {
-                    slamVSpeed = 0;
-                    slamY = slamY1;
-                    slamPhase++;
-                }   
+                    //Deduct Alarm
+                    if(slamTpAlarm &gt; 0)
+                    {
+                        slamInst.image_xscale = slamTpAlarm/slamTpTime;
+                        //slamInst.image_yscale = 1/slamInst.image_xscale;
+                        //slamY = slamY1+(slamY2-slamY1)*(slamTpAlarm/slamTpTime);
+                        slamInst.image_alpha = slamTpAlarm/slamTpTime;
+                        slamTpAlarm -= 1;
+                    }
+                    //Teleport
+                    else 
+                    {
+                        slamInst.image_xscale = 1;
+                        slamInst.image_yscale = 1;
+                        slamInst.image_alpha = 1;
+                        slamY = slamY1;
+                        slamPhase++;
+                    }   
+                }  
             }
             //End Slam Attack
             else
             {
-                spikeSlam = false;            
+                slamX = -1;
+                spikeSlam = false;  
             }
         }
         prevSpikeSlam = spikeSlam;
+        
+        //Restart Attack
+        /*if(slamAttack &amp;&amp; !spikeSlam)
+        {
+            spikeSlam = true;
+        } */
+        
         
         //Controll Slam Instance (SYSTEM)
         slamInst.x = slamX;
@@ -769,7 +1012,150 @@ if(currentAttack != -1)
                 spikeEntrance = false;
             }
         }
+        
+        //Lock and Unlock Spikes
+        if(spikeLock != prevSpikeLock)
+        {
+            for(i = 0;i &lt; spikeCount;i++)
+            {
+                spikeArray[i].locked = spikeLock;
+            }
+        }
+        prevSpikeLock = spikeLock;
+        
+        //Platform Spawner (SYSTEM)
+        if(platformSpawn &amp;&amp; abs(platformSpeed) &gt;= 4) //abs(platformSpeed) == abs(platformSpeedCap))
+        {
+            //Countdown Alarm
+            if(platformAlarm &gt; 0)
+            {
+                platformAlarm -= 1;
+            }
+            //Spawn Platform
+            else
+            {
+                //Create and Modify Platform
+                //tvObj = instance_create(platformX,platformY,obj_movingPlatform_boss);
+                //tvObj.image_xscale = platformSpawnDir;
+                //tvObj.hSpeed *= platformSpawnDir;
+                
+                //Spawn Platform On Corresponding Side
+                //platformY = irandom_range(platformY1,platformY2);
+                
+                //Platform Spawning Based On Array
+                if(platArrayPos &lt; array_length_1d(platArray))
+                {
+                    platformY = platArray[platArrayPos];
+                    platArrayPos++;
+                                           
+                    //Spawn Platform
+                    if(platformDir &gt; 0)
+                    {
+                        instance_create(0-platformX,platformY,obj_movingPlatform_boss);
+
+                    }
+                    else if(platformDir &lt; 0)
+                    {
+                        instance_create(room_width+platformX,platformY,obj_movingPlatform_boss);
+                    }
+                }
+                
+                //Stop Spawning Platforms (and end attack)
+                else
+                {
+                    spikeLock = false;
+                    spikeEnd = true;
+                }
+                
+                //Reset Alarm 
+                platformAlarm = platformDelay;
+            }
+        }
+        
+        //Manipulate Platform Speed (SYSTEM)
+        if(platformDir != 0) // &amp;&amp; platformSpeed != platformDir*platformSpeedCap)
+        {
+            //Countdown Alarm
+            if(platformSpeedAlarm &gt; 0)
+            {
+                platformSpeedAlarm -= 1;
+            }
+            //Modify Platforms
+            else
+            {
+                //Move Towards
+                if(sign(platformSpeed-(platformDir*platformSpeedCap)) == sign(platformSpeed+platformRate*platformDir-(platformDir*platformSpeedCap)))
+                {
+                    platformSpeed += platformRate*platformDir;
+                }            
+                //Stop At Specified Speed
+                else
+                {
+                    platformSpeed = platformSpeedCap*platformDir;
+                }   
+                
+                //Reset Alarm
+                platformSpeedAlarm = platformSpeedDelay;
+            }
+        }
+        else platformSpeed = 0;
+        
+        //Set Platform To Platform Speed
+        if(instance_exists(obj_movingPlatform))
+        {
+            //Apply Speed To All Instances
+            for(i = 0;i &lt; instance_number(obj_movingPlatform);i++)
+            {
+                tvObj = instance_find(obj_movingPlatform,i);
+                tvObj.hSpeed = platformSpeed;
+            }
+        }   
+        
+        //Set All Spikes To Exit
+        if(spikeExit != prevSpikeExit)
+        {
+            //Set All Spikes To New Value
+            for(i = 0;i &lt; array_length_1d(spikeArray);i++)
+            {
+                spikeArray[i].exiting = spikeExit;
+            }
+        }
+        prevSpikeExit = spikeExit;
+    
+        //End Platform/Spike Attack (SYSTEM)
+        if(spikeEnd)
+        {
+            //Put Away Boss Arm
+            if(armAngle+armSpeed-armRate &gt; armAngle1)
+            {
+                armDeployed = false;
+            }
+            //Pull Boss Character Off Screen
+            else if(bossY != bossY1)
+            {
+                bossDeployed = false;
+            }
+            //Delay Final Stomp Attack
+            else if(finalSlamAlarm &gt; 0)
+            {   
+                finalSlamAlarm -= 1;
+            }
+            //Final Stomp Attack
+            else if(!spikeExit)
+            {
+                spikeSlam = true;
+                spikeExit = true;
+            }
+            //Delete All Attack Instances And End Attack
+            else if(!instance_exists(obj_steppingSpikes_manual))
+            {
+                instance_destroy(slamInst);
+                currentAttack = -1;
+            }
+        }        
     }
+    
+    
     
     //SWINGING PENDULUM
     if(currentAttack == 3)
@@ -867,7 +1253,30 @@ if(currentAttack != -1)
         pendPrevAngle = pendInst.image_angle;
     }
     
-    //BASKETBALL RAIN
+    //BACKGROUND BULLET HELL
+    else if(currentAttack == 4)
+    {
+        //Initialize Attack Variables
+        if(!attackInitialized)
+        {
+            //Background Yolk Vars
+            
+            
+            
+            
+            attackInitialized = true;
+        }
+        
+        //Manage Attack Events
+        if(attackTimer == 1)
+        {
+            shipDeployed = true;
+        }
+        else if(attackTimer == 300)
+        {
+            shipDeployed = false;
+        }
+    }
 }
 
 
@@ -1040,6 +1449,69 @@ if(leverR != leverDR)
 //Set PreviousLeverDR
 prevLeverDR = leverDR;
 
+//Manage Ship Deployment
+if(shipDeployed)
+{
+    //Deploy Ship
+    if(shipY != shipY2 &amp;&amp; !shipBobbing)
+    {
+        if(sign(shipY2-shipY) == sign(shipY2-shipY+shipInitialVSpeed*sign(shipY2-shipY)))
+        {
+            shipY += shipInitialVSpeed*sign(shipY2-shipY);
+        }
+        else
+        {
+            shipY = shipY2;
+        }
+    }
+    //Proceed To Bobbing 
+    else
+    {
+        //Initialize Bobbing Vars
+        if(!shipBobbing)
+        {
+            shipBobY = shipY;
+            shipVSpeed = shipInitialVSpeed; //shipVRate*25;
+            shipBobbing = true;
+        }             
+    }    
+}
+else
+{
+    //Wait For Bobbing To Subside
+    if(shipVSpeed == -shipInitialVSpeed)
+    {
+        //Turn Off Ship Bobbing
+        shipBobbing = false;
+    
+        //Pull Ship Upwards
+        if(sign(shipY1-shipY) == sign(shipY1-shipY+shipInitialVSpeed*sign(shipY1-shipY)))
+        {
+            shipY += shipInitialVSpeed*sign(shipY1-shipY);
+        }
+        else
+        {
+            shipY = shipY1;
+        }
+    }
+}
+
+//Bob The Ship
+if(shipBobbing)
+{
+    //Manage VSpeed
+    if(shipY &gt; shipBobY)
+    {
+        shipVSpeed -= shipVRate;
+    }
+    else
+    {
+        shipVSpeed += shipVRate;
+    }
+        
+    //Move Ship 
+    shipY += shipVSpeed;
+}
 
 
 
@@ -1157,6 +1629,32 @@ if(leverDeployed)
     
 }
 
+//Draw Airship and Tiny Boss
+if(true)
+{
+    //Control ShipX Relative To Camera
+    shipXOffSet = shipXOffSet2-(shipXOffSet2-shipXOffSet1)*(view_xview[0]/(0+room_width-view_wview[0]));
+    shipX = round(view_xview[0]+shipXOffSet);
+    roundShipY = round(shipY);
+    
+    //Draw Tiny Wire
+    draw_sprite_ext(spr_airship_wire,0,shipX,roundShipY+tinyBossY,1,((roundShipY+tinyBossY)-roundShipY)/sprite_get_height(spr_airship_wire),0,bossColor,1);
+    
+    //Draw Tiny Boss
+    draw_sprite_ext(spr_airship_yolkchild,0,shipX,roundShipY+tinyBossY,1,1,0,bossColor,1);
+    
+    //Draw Ship
+    draw_sprite_ext(spr_airship,0,shipX,roundShipY,1,1,0,bossColor,1);
+    
+    //Draw Wires For Tiny Guns
+    draw_sprite_ext(spr_airship_wire,0,shipX+gunXOffSet,roundShipY+tinyBossY+gunYOffSet,-1,((roundShipY+tinyBossY+gunYOffSet)-roundShipY)/sprite_get_height(spr_airship_wire),0,bossColor,1);
+    draw_sprite_ext(spr_airship_wire,0,shipX-gunXOffSet,roundShipY+tinyBossY+gunYOffSet,1,((roundShipY+tinyBossY+gunYOffSet)-roundShipY)/sprite_get_height(spr_airship_wire),0,bossColor,1);
+    
+    //Draw Tiny Guns
+    draw_sprite_ext(spr_airship_gun,0,shipX+gunXOffSet,roundShipY+tinyBossY+gunYOffSet,-1,1,0,bossColor,1);
+    draw_sprite_ext(spr_airship_gun,0,shipX-gunXOffSet,roundShipY+tinyBossY+gunYOffSet,1,1,0,bossColor,1);
+}
+
 //Draw Pendulum Warning
 if(currentAttack == 3)
 {
@@ -1165,6 +1663,8 @@ if(currentAttack == 3)
 
 //Draw Boss Character
 draw_sprite_ext(spr_yolkChild_wink,0,round(bossX),round(bossY),1,1,0,bossColor,1);
+
+
 </string>
           </argument>
         </arguments>

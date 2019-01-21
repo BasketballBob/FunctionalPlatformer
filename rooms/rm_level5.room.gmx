@@ -64,21 +64,15 @@ instance_create(x,y,obj_fadeOutElevator);</code>
     <instance objName="obj_towerWall5" x="500" y="1920" name="inst_AE13460B" locked="0" code="" scaleX="6" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall5" x="500" y="1680" name="inst_80F9481C" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall5" x="580" y="1600" name="inst_8F30984F" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="460" y="1520" name="inst_31A1A98E" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall5" x="20" y="1520" name="inst_DB32E8FF" locked="0" code="" scaleX="22" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_saw" x="320" y="2060" name="inst_12BE4C31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_shimmyObstacle" x="360" y="2000" name="inst_232D00DB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pendulum" x="320" y="1340" name="inst_BD1C1143" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall5" x="20" y="1440" name="inst_C466927A" locked="0" code="" scaleX="11" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obj_jumpPad" x="80" y="1440" name="inst_212C71E0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="160" y="1240" name="inst_E150FCF3" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall5" x="240" y="1240" name="inst_2D68E21B" locked="0" code="" scaleX="10" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="440" y="1240" name="inst_56C28110" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_shooter" x="660" y="1220" name="inst_55AF909B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_steppingSpikeGenerator" x="160" y="1220" name="inst_43329386" locked="0" code="" scaleX="18" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="560" y="1160" name="inst_A844C77A" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="560" y="1080" name="inst_6A923410" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="560" y="1000" name="inst_317FEA7E" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall5" x="360" y="940" name="inst_16A98F61" locked="0" code="" scaleX="10" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obj_basketball" x="460" y="860" name="inst_B9E7BBF5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall5" x="140" y="940" name="inst_2362E8C0" locked="0" code="" scaleX="7" scaleY="4" colour="4294967295" rotation="0"/>
@@ -86,18 +80,12 @@ instance_create(x,y,obj_fadeOutElevator);</code>
     <instance objName="obj_saw" x="350" y="1000" name="inst_879874C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_jumpPad" x="60" y="980" name="inst_FCEA2A74" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall5" x="20" y="980" name="inst_C69DA7E4" locked="0" code="" scaleX="4" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="20" y="740" name="inst_06D2F00A" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall5" x="120" y="720" name="inst_BC9AD243" locked="0" code="" scaleX="25" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_gourdon_running" x="460" y="520" name="inst_87F535D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall5" x="20" y="520" name="inst_ED754BF9" locked="0" code="" scaleX="26" scaleY="3" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="540" y="560" name="inst_32B0AF21" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="580" y="640" name="inst_05F6E381" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rotatingObjectLeft" x="240" y="910" name="inst_E100D941" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="640" y="0" name="inst_985C3FAD" locked="0" code="" scaleX="2" scaleY="18" colour="4294967295" rotation="0"/>
-    <instance objName="obj_towerWall5" x="100" y="280" name="inst_ECB2C09B" locked="0" code="" scaleX="26" scaleY="4" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="20" y="280" name="inst_888947FD" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="20" y="360" name="inst_CD6687A1" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="20" y="440" name="inst_35D6465A" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_towerWall5" x="100" y="280" name="inst_ECB2C09B" locked="0" code="" scaleX="26" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall5" x="240" y="220" name="inst_3D324A86" locked="0" code="" scaleX="6" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_gourdonDeathCutscene" x="500" y="580" name="inst_ED781BD6" locked="0" code="" scaleX="2" scaleY="7" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall5" x="300" y="1280" name="inst_0784A3D9" locked="0" code="" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
@@ -135,10 +123,42 @@ instance_create(x,y,obj_fadeOutElevator);</code>
     <instance objName="obj_leftoverMush2" x="307" y="147" name="inst_8CBDC7BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_elevatorDoor" x="540" y="180" name="inst_CFB512BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_checkPoint" x="520" y="900" name="inst_16CCA49B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_5" x="460" y="1520" name="inst_F30492EA" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_5" x="160" y="1240" name="inst_DA2D02D5" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_5" x="440" y="1240" name="inst_80DA48A6" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_5" x="560" y="1160" name="inst_66E98E37" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_5" x="560" y="1080" name="inst_5CE1D392" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_5" x="560" y="1000" name="inst_3D6C6A3B" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_5" x="20" y="740" name="inst_093C0D66" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_5" x="580" y="640" name="inst_88A85949" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_5" x="540" y="560" name="inst_B5E65F45" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_5" x="20" y="360" name="inst_263531BC" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_5" x="20" y="440" name="inst_CA9DE927" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_5" x="20" y="280" name="inst_E4AB2E0F" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
+    <tile bgName="bg_mainMansionDecor_0" x="200" y="1480" w="40" h="80" xo="20" yo="0" id="10001268" name="inst_2310ACED" depth="2000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_mansionDecor_4" x="300" y="1900" w="54" h="68" xo="0" yo="0" id="10001456" name="inst_467461DD" depth="2000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_mansionDecor_4" x="400" y="840" w="54" h="68" xo="0" yo="0" id="10001458" name="inst_51D0FA1C" depth="2000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_mansionDecor_5" x="140" y="1340" w="33" h="42" xo="0" yo="0" id="10001460" name="inst_014044F7" depth="2000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_mansionDecor_6" x="60" y="1080" w="104" h="83" xo="0" yo="0" id="10001463" name="inst_E1BA6F67" depth="2000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_elevatorDoor" x="40" y="1980" w="80" h="100" xo="0" yo="0" id="10000196" name="inst_8775CE27" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_exitSign" x="564" y="160" w="37" h="34" xo="0" yo="0" id="10000204" name="inst_54FB4842" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_window5" x="180" y="1960" w="72" h="111" xo="0" yo="0" id="10001133" name="inst_6D513107" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_window5" x="460" y="1380" w="72" h="111" xo="0" yo="0" id="10001135" name="inst_89FCBD42" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_window5" x="140" y="600" w="72" h="111" xo="0" yo="0" id="10001138" name="inst_A5B38B89" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_window5" x="460" y="600" w="72" h="111" xo="0" yo="0" id="10001139" name="inst_B6028D19" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_window5" x="300" y="600" w="72" h="111" xo="0" yo="0" id="10001140" name="inst_9494F04E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_window5" x="260" y="400" w="80" h="111" xo="0" yo="0" id="10001142" name="inst_EEC7EF57" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_window5" x="420" y="400" w="80" h="111" xo="0" yo="0" id="10001143" name="inst_93B0298F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_window5" x="380" y="1860" w="80" h="111" xo="0" yo="0" id="10001145" name="inst_0ED511A1" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_mainMansionDecor_0" x="160" y="320" w="20" h="40" xo="20" yo="0" id="10001287" name="inst_6F68BCBC" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_mansionDecor_1" x="220" y="1100" w="114" h="140" xo="0" yo="0" id="10001437" name="inst_D7147EDD" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_mansionDecor_1" x="340" y="1100" w="114" h="140" xo="0" yo="0" id="10001438" name="inst_56294B2D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_mansionDecor_1" x="260" y="1380" w="114" h="140" xo="0" yo="0" id="10001440" name="inst_136398D3" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_mansionDecor_2" x="140" y="840" w="161" h="100" xo="0" yo="0" id="10001448" name="inst_7327757C" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_mansionDecor_3" x="520" y="1800" w="97" h="120" xo="0" yo="0" id="10001449" name="inst_D4828C11" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_window5" x="100" y="400" w="80" h="111" xo="0" yo="0" id="10001452" name="inst_B1DAB440" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

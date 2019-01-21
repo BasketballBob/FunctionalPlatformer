@@ -59,6 +59,7 @@ instance_create(x,y,obj_fadeOutElevator);</code>
     <instance objName="obj_wall" x="160" y="80" name="inst_E9693836" locked="0" code="" scaleX="16" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall4" x="-100" y="-20" name="inst_28733B67" locked="0" code="" scaleX="5" scaleY="25" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall4" x="640" y="-20" name="inst_5EF3F580" locked="0" code="" scaleX="5" scaleY="25" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ed" x="360" y="280" name="inst_FE7C9049" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_elevatorInterior" x="180" y="100" w="280" h="180" xo="0" yo="0" id="10000084" name="inst_F83B217C" depth="2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

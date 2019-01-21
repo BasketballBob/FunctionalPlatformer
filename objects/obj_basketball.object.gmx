@@ -27,7 +27,6 @@
             <kind>1</kind>
             <string>//Basic Variables
 
-
 //Basketball
 vSpeed = 0;
 grav = 1;

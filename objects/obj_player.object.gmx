@@ -70,7 +70,8 @@ playerLocked = false;
 camXCap = 80;
 camXDist = camXCap;
 camXDistEnabled = true; //false
-camXRate = 2;
+if(room = rm_fightFINAL) camXDistEnabled = false; 
+camXRate = 2; //OFF
 camXSpeedRatio = .035; //.035
 lastXScale = -1;
 
@@ -114,6 +115,14 @@ goodByeAlarm = 0;
 goodByeTime = convInputTime;
 goodByeActive = false;
 
+//Door Entering Manager
+doorClose = false;
+
+//Obstacle Manager
+omActiveDist = 640;
+omAlarm = 0;
+omTime = 30;
+
 //Checkpoint Manager
 if(global.checkPointRoom == room)
 {
@@ -121,6 +130,14 @@ if(global.checkPointRoom == room)
     y = global.checkPointId.y+sprite_height/2;
 }
 cy = y-view_hview[0]/1.4;//(obj_followingYolk camera edgecase)
+
+//Position Manager
+if(global.destEnabled)
+{
+    x = global.destX;
+    y = global.destY;
+    global.destEnabled = false;
+}
 
 //Generate Necessary GUI
 if(instance_exists(obj_water))
@@ -226,6 +243,12 @@ if(conversation)
 
 //Camera Movement
 script_execute(scr_cameraControl);
+
+//Obstacle Management
+/*if(room != rm_fightFINAL)
+{
+    script_execute(scr_obstacleManager);
+}*/
 
 //Reset Collision Sprite
 mask_index = spr_basicCollision;
@@ -545,7 +568,7 @@ if(!place_meeting(x,y+1,obj_wall) &amp;&amp; !onHPlatform)
         image_index = 1; 
     }
 }
-else if(x != xprevious &amp;&amp; right &amp;&amp; !left || x != xprevious &amp;&amp; left &amp;&amp; !right)
+else if(!place_meeting(x+1,y,obj_wall) &amp;&amp; right &amp;&amp; !left || !place_meeting(x-1,y,obj_wall) &amp;&amp; left &amp;&amp; !right) //x != xprevious
 {
     sprite_index = spr_playerRunning;
     image_speed = .3; //.25
@@ -568,6 +591,59 @@ if(place_meeting(x,y,obj_obstacle)
     
     //Create Death Transition
     instance_create(x,y,obj_deathScreen);
+}
+
+//Room Entering Management
+if(instance_exists(obj_roomTraveler))
+{
+    //Check For Closest Door
+    defaultVal = sqr(room_width);
+    doorClose = false;
+    doorDist = defaultVal;
+    doorReqDist = 35; //35
+    
+    //Check All Existing Instances
+    for(i = 0;i &lt; instance_number(obj_roomTraveler);i++)
+    {
+        tvObj = instance_find(obj_roomTraveler,i);
+        
+        //Check If Close Enough
+        //if(abs(x-tvObj.x) &lt; doorReqDist)
+        //{   
+            //Check For Collision
+            if(place_meeting(x,y,tvObj))
+            {
+                //Check For Closest Door
+                if(abs(x-tvObj.x) &lt; doorDist)
+                {
+                    doorInst = tvObj;
+                    doorDist = abs(x-tvObj.x);
+                    doorClose = true;
+                }
+            }
+        //}
+    }
+    
+    //Interact With Door
+    if(doorClose)
+    {
+        //Go To New Room
+        if(place_meeting(x,y+1,obj_wall) &amp;&amp; down)
+        {
+            //room_goto(doorInst.destRoom);           
+            
+            //Create Transition 
+            tv = instance_create(x,y,obj_fadeInElevator);
+            
+            //Modify Movement Vars
+            tv.destRoom = doorInst.destRoom;
+            global.destEnabled = doorInst.destEnabled;
+            global.destX = doorInst.destX;
+            global.destY = doorInst.destY;
+            
+            cutscene = true;
+        }
+    }
 }
 
 //Conversation Manager
@@ -756,7 +832,7 @@ prevConvPhase = convPhase;
 prevBigConvPhase = bigConvPhase;
         
 //Draw Conversation Indicator
-if(convIcon &amp;&amp; !dead || goodByeAlarm &gt; 0)
+if(convIcon &amp;&amp; !dead || goodByeAlarm &gt; 0 || doorClose &amp;&amp; !cutscene)
 {
     //Draw Final Goodbye (Edgecase for drawing "bye" after conversation has ended)
     goodByeActive = false;
@@ -766,7 +842,15 @@ if(convIcon &amp;&amp; !dead || goodByeAlarm &gt; 0)
         convImg = 1;
         convImgSpeed = 0;
         goodByeActive = true;
-        goodByeAlarm -= 1;
+        goodByeAlarm -= 1;        
+    }
+    
+    //Draw Door Entrance Request
+    else if(doorClose &amp;&amp; !cutscene)
+    {
+        convSprite = spr_conversationIndicator;
+        convImg = 2;
+        convImgSpeed = 0;
     }
     
     //Draw "Z" Sprite
@@ -791,6 +875,7 @@ if(convIcon &amp;&amp; !dead || goodByeAlarm &gt; 0)
         convSprite = spr_conversationIndicator_ellipses;
         convImgSpeed = .25;
     }   
+    
     
     //Control Animation
     if(convImgSpeed &gt; 0)
@@ -831,6 +916,7 @@ if(convIcon &amp;&amp; !dead || goodByeAlarm &gt; 0)
         //convScale = (1+convInputScale*2)*(goodByeAlarm/goodByeTime);
         convScale = goodByeAlarm/goodByeTime;
         draw_sprite_ext(convSprite,convImg,x-2,y-20,convScale,convScale,0,c_white,convAlpha);
+
     }
     //Draw Sprite Normally
     else

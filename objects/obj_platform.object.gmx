@@ -2,7 +2,7 @@
 <object>
   <spriteName>spr_platform</spriteName>
   <solid>0</solid>
-  <visible>0</visible>
+  <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>obj_wall</parentName>
@@ -25,104 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//THE FOLLOWING PLATFORMING CODE EXISTS THANKS TO
-//SHAUN SPAULDING AND HIS PLATFORM TUTORIAL
-sprite_index = -1;
-image_speed = 0;
-depth = 2;
-
-//Tile Set Variables
-width = floor(image_xscale);
-xp = 0;
-tileSize = 20;
-tileSprite = 0;
-
-
-for(xp = 0;xp &lt; width;xp++)
-{
-    if(xp == 0 &amp;&amp; !position_meeting(x-1,y,obj_wall))
-    {
-        tileSprite = 0;
-    }
-    else if(xp == width-1 &amp;&amp; !position_meeting(x+tileSize*width+1,y,obj_wall))
-    {
-        tileSprite = 2;
-    }
-    else
-    {
-        tileSprite = 1;
-    }
-    
-    tile_add(bg_platformTile,tileSprite*tileSize,0,tileSize,tileSize,x+xp*tileSize,y,1);
-}
-
-//Allow Platform To Collide
-sprite_index = object_get_sprite(obj_platform);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//Control Player Collision
-if(instance_exists(obj_player))
-{
-    //NOTE: Manually Falling Through Platforms Disabled
-    if(obj_player.y+obj_player.sprite_height/2 &gt; y)// || obj_player.down)//-sprite_height/2)
-    {
-        //sprite_index = spr_platform;
-        //image_index = 1;
-        sprite_index = -1;
-        image_index = 0;
-    }
-    else
-    {
-        //sprite_index = -1;
-        //image_index = 0;
-        sprite_index = spr_platform;
-        image_index = 1;
-    }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//Draw Sprite
-draw_sprite_ext(spr_platform,image_index,x,y,image_xscale,image_yscale,0,c_white,1);
+            <string>//This Object Is Used As A Parent To Allow All Platform Variations
+//To Be Referenced As Platforms
 </string>
           </argument>
         </arguments>

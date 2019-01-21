@@ -40,7 +40,7 @@ animationSpeed = 0;
 startDelay = 0;
 finished = false;
 finTimer = 0;
-//textDepth = -2;
+textDepth = 0; //Can't be edited from individual conversants
 
 
 //Conversation Pieces
@@ -101,7 +101,7 @@ if(conNumber != lastConNumber &amp;&amp; conNumber &lt; array_length_1d(conversa
 {
     textBox.printString = conversation[conNumber];
 }
-else if(conNumber != lastConNumber)
+else if(conNumber != lastConNumber &amp;&amp; !finished)
 {
     obj_player.goodByeAlarm = obj_player.goodByeTime;
     textBox.printString = " ";
@@ -149,12 +149,12 @@ if(finished)
     convPhase = -1;
 }
 //Goodbye Input
-else if(textBox.printCount == string_length(textBox.printString))
+else if(conNumber == array_length_1d(conversation))
 {
     convPhase = 2;
 }
 //General Input Required
-else if(textBox.printCount == string_length(textBox.printString) &amp;&amp; printString != " ")
+else if(textBox.printCount == string_length(textBox.printString) &amp;&amp; textBox.printString != " ")
 {
     convPhase = 0;
 }

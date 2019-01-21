@@ -52,7 +52,7 @@ instance_create(x,y,obj_fadeOutElevator);</code>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_platform" x="100" y="340" name="inst_0BD2DB4E" locked="0" code="" scaleX="6" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="100" y="340" name="inst_0BD2DB4E" locked="0" code="" scaleX="6" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall5" x="60" y="340" name="inst_F38E786B" locked="0" code="" scaleX="2" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall5" x="220" y="340" name="inst_7DBA0D3B" locked="0" code="" scaleX="20" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall5" x="100" y="400" name="inst_BCDF08BA" locked="0" code="" scaleX="7" scaleY="2" colour="4294967295" rotation="0"/>

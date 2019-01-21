@@ -116,8 +116,37 @@ else //TILE ZERO
 {
     tileSprite = 0;
 }
-        
+     
         tile_add(bg_towerTile_3,0+20*tileSprite,0,20,20,x+xp*20,y+yp*20,-.5);
+        
+        //Additional Edgecase Tile Vals (USED FOR SELECT COLLISIONS)
+        platRight = position_meeting(x+xp*ts2+ts2+1,y+yp*ts2+ts,obj_platform);
+        platLeft = position_meeting(x+xp*ts2-1,y+yp*ts2+ts,obj_platform);
+        if(!up)
+        {
+            if(platRight) tile_add(bg_towerTile_3,0+20*17,0,20,20,x+xp*20,y+yp*20,-.5);
+            if(platLeft) tile_add(bg_towerTile_3,0+20*16,0,20,20,x+xp*20,y+yp*20,-.5); 
+        }
+        else
+        {
+            if(platRight) tile_add(bg_towerTile_3,0+20*21,0,20,20,x+xp*20,y+yp*20,-.5);
+            if(platLeft) tile_add(bg_towerTile_3,0+20*20,0,20,20,x+xp*20,y+yp*20,-.5); 
+        }
+        
+        //EDGECASE BOTTOM CORNER SPRITES
+        if(right &amp;&amp; down &amp;&amp; !position_meeting(x+xp*ts2+ts+ts+1,y+yp*ts2+ts+ts+1,obj_towerWall4))
+        //&amp;&amp; position_meeting(x+xp*ts2+ts-ts-1,y+yp*ts2+ts+ts+1,obj_towerWall4)) //RIGHT
+        {
+            //tileSprite = 19;
+            tile_add(bg_towerTile_3,0+20*19,0,20,20,x+xp*20,y+yp*20,-.5);
+        }
+        if(left &amp;&amp; down &amp;&amp; !position_meeting(x+xp*ts2+ts-ts-1,y+yp*ts2+ts+ts+1,obj_towerWall4))
+        //&amp;&amp; position_meeting(x+xp*ts2+ts+ts+1,y+yp*ts2+ts+ts+1,obj_towerWall4)))//LEFT
+        {
+            //tileSprite = 18;
+            tile_add(bg_towerTile_3,0+20*18,0,20,20,x+xp*20,y+yp*20,-.5);
+        }
+        
     } //END OF FOR LOOP 1
 }   
 </string>

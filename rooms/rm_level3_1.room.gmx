@@ -62,31 +62,31 @@ instance_create(x,y,obj_fadeOutElevator);</code>
     <instance objName="obj_towerWall3" x="620" y="-100" name="inst_A215407A" locked="0" code="" scaleX="1" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="260" y="3420" name="inst_36A8CEF0" locked="0" code="" scaleX="18" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="200" y="3260" name="inst_4BB1BC78" locked="0" code="" scaleX="14" scaleY="4" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="560" y="3320" name="inst_8549665E" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="200" y="3420" name="inst_D8CBBC53" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="560" y="3320" name="inst_8549665E" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="200" y="3420" name="inst_D8CBBC53" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="200" y="3200" name="inst_09682184" locked="0" code="" scaleX="5" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_rotatingObjectLeft" x="420" y="3300" name="inst_279384BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="20" y="3080" name="inst_06A2285C" locked="0" code="" scaleX="2" scaleY="13" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="120" y="3140" name="inst_0A8767EA" locked="0" code="" scaleX="4.21052646636963" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="120" y="3140" name="inst_0A8767EA" locked="0" code="" scaleX="4.21052646636963" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_movingPlatformSpawner" x="-80" y="2920" name="inst_A909EA84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="340" y="2900" name="inst_BB8A85C4" locked="0" code="" scaleX="14" scaleY="6" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="60" y="3140" name="inst_159380DE" locked="0" code="" scaleX="3" scaleY="10" colour="4294967295" rotation="0"/>
     <instance objName="obj_saw" x="80" y="3120" name="inst_9D20AAB0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="20" y="3000" name="inst_3210234E" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="20" y="3000" name="inst_3210234E" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_saw" x="340" y="2910" name="inst_30727517" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_shimmyObstacle" x="500" y="2840" name="inst_7B2A51F3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="440" y="2840" name="inst_5EDC7600" locked="0" code="" scaleX="9" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_movingPlatformSpawner" x="700" y="2680" name="inst_2392108A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_movingPlatformSpawner" x="-80" y="2580" name="inst_0A5AF67F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="580" y="2760" name="inst_F23BACBD" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="580" y="2760" name="inst_F23BACBD" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="340" y="2560" name="inst_0AA0B0BB" locked="0" code="" scaleX="14" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_saw" x="340" y="2580" name="inst_F508AAB8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_saw" x="120" y="2660" name="inst_8242EBB8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_saw" x="120" y="2720" name="inst_F653BA4E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="100" y="2660" name="inst_7BAA149F" locked="0" code="" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_basketball" x="460" y="2480" name="inst_F3ABC9FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="560" y="2460" name="inst_BFD2E591" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="500" y="2360" name="inst_294D2EE5" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="560" y="2460" name="inst_BFD2E591" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="500" y="2360" name="inst_294D2EE5" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="20" y="2260" name="inst_81CD8F29" locked="0" code="" scaleX="4" scaleY="7" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="180" y="2320" name="inst_50B7378C" locked="0" code="" scaleX="8" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="380" y="2320" name="inst_2F89337E" locked="0" code="" scaleX="3" scaleY="4" colour="4294967295" rotation="0"/>
@@ -99,29 +99,29 @@ instance_create(x,y,obj_fadeOutElevator);</code>
     <instance objName="obj_saw" x="380" y="1880" name="inst_163F73D0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_saw" x="220" y="1880" name="inst_4C7C06C0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="220" y="1860" name="inst_3EDEC913" locked="0" code="" scaleX="8" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="20" y="1780" name="inst_51B851E0" locked="0" code="" scaleX="2.10526323318481" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="20" y="1680" name="inst_3ABB3C98" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="20" y="1780" name="inst_51B851E0" locked="0" code="" scaleX="2.10526323318481" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="20" y="1680" name="inst_3ABB3C98" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_checkPoint" x="140" y="1640" name="inst_96B9772E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="580" y="1980" name="inst_1DE8213C" locked="0" code="" scaleX="2" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="obj_shimmyObstacle" x="260" y="2320" name="inst_5A438F8D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="100" y="1680" name="inst_0AD4E907" locked="0" code="" scaleX="26" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_steppingSpikeGenerator" x="300" y="1660" name="inst_76A27F78" locked="0" code="" scaleX="16" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="540" y="1500" name="inst_9FD8ED01" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="540" y="1500" name="inst_9FD8ED01" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="20" y="1420" name="inst_6CC2674E" locked="0" code="" scaleX="22" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obj_steppingSpikeGenerator" x="100" y="1400" name="inst_3FFABB34" locked="0" code="" scaleX="18" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="20" y="1340" name="inst_37E9FD58" locked="0" code="" scaleX="4" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obj_steppingSpikeGenerator" x="20" y="1320" name="inst_DAFEB4F7" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="20" y="1240" name="inst_05022ACE" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="20" y="1240" name="inst_05022ACE" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="100" y="1180" name="inst_3C63CE75" locked="0" code="" scaleX="11" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_steppingSpikeGenerator" x="100" y="1160" name="inst_0B80D497" locked="0" code="" scaleX="11" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="460" y="1100" name="inst_D420CE50" locked="0" code="" scaleX="8" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="obj_steppingSpikeGenerator" x="460" y="1080" name="inst_2784B8E6" locked="0" code="" scaleX="8" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="360" y="1140" name="inst_E615201A" locked="0" code="" scaleX="3" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obj_shimmyObstacle" x="520" y="1100" name="inst_9BFCAB95" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="460" y="1420" name="inst_A2169A06" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="460" y="1420" name="inst_A2169A06" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="400" y="1500" name="inst_97776D68" locked="0" code="" scaleX="3" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="obj_shooter" x="-20" y="1380" name="inst_05D9E246" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="580" y="1000" name="inst_646298A7" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="580" y="1000" name="inst_646298A7" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_movingPlatformSpawner" x="700" y="900" name="inst_66ADB559" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="340" y="840" name="inst_AA01C3F0" locked="0" code="" scaleX="4" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="220" y="800" name="inst_ED0F5DDA" locked="0" code="" scaleX="4" scaleY="6" colour="4294967295" rotation="0"/>
@@ -133,17 +133,17 @@ instance_create(x,y,obj_fadeOutElevator);</code>
     <instance objName="obj_steppingSpikeGenerator" x="340" y="820" name="inst_9D8C78AB" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="20" y="680" name="inst_5DCB597B" locked="0" code="" scaleX="2" scaleY="12" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="120" y="600" name="inst_69F657AC" locked="0" code="" scaleX="25" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="560" y="500" name="inst_067200FC" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="560" y="500" name="inst_067200FC" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="20" y="380" name="inst_99564C22" locked="0" code="" scaleX="25" scaleY="3" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="520" y="420" name="inst_0DD1DEEF" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="520" y="420" name="inst_0DD1DEEF" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="20" y="300" name="inst_2D02878B" locked="0" code="" scaleX="4" scaleY="4.21052646636963" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="100" y="120" name="inst_A0047BB1" locked="0" code="" scaleX="26" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_saw" x="380" y="20" name="inst_637EBD72" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_saw" x="500" y="120" name="inst_B5BDF353" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_saw" x="260" y="120" name="inst_6820FD43" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_saw" x="100" y="140" name="inst_38182429" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="20" y="200" name="inst_E21F2DAB" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform" x="20" y="120" name="inst_09587565" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="20" y="200" name="inst_E21F2DAB" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_0" x="20" y="120" name="inst_09587565" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_steppingSpikeGenerator" x="100" y="100" name="inst_3EB61301" locked="0" code="" scaleX="20" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rotatingObjectLeft" x="400" y="300" name="inst_C394AE94" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_towerWall3" x="280" y="300" name="inst_38F269F0" locked="0" code="" scaleX="8" scaleY="4" colour="4294967295" rotation="0"/>
@@ -160,11 +160,20 @@ instance_create(x,y,obj_fadeOutElevator);</code>
   </instances>
   <tiles>
     <tile bgName="bg_elevatorDoor" x="40" y="3420" w="80" h="100" xo="0" yo="0" id="10000183" name="inst_91F1F993" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bg_mainForestDecor_0" x="460" y="1560" w="20" h="20" xo="0" yo="0" id="10000701" name="inst_2E4621E8" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bg_mainForestDecor_0" x="480" y="1560" w="20" h="20" xo="0" yo="0" id="10000702" name="inst_2ABA1B65" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bg_mainForestDecor_0" x="500" y="1560" w="20" h="20" xo="0" yo="0" id="10000703" name="inst_BB456E89" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bg_mainForestDecor_0" x="520" y="1560" w="20" h="20" xo="0" yo="0" id="10000704" name="inst_441EFA9F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_mainForestDecor_0" x="360" y="1840" w="20" h="20" xo="0" yo="0" id="10000717" name="inst_DBDFD62C" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_forestDecor_8" x="200" y="2980" w="160" h="220" xo="0" yo="0" id="10001108" name="inst_4A708754" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_forestDecor_8" x="320" y="920" w="160" h="220" xo="0" yo="0" id="10001109" name="inst_9D280A55" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_forestDecor_8" x="120" y="164" w="160" h="220" xo="0" yo="0" id="10001110" name="inst_06EDC41A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_forestDecor_9" x="200" y="1620" w="89" h="60" xo="0" yo="0" id="10001111" name="inst_8FBA9B2A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_forestDecor_9" x="160" y="3460" w="89" h="60" xo="0" yo="0" id="10001112" name="inst_F8D3BD3D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_forestDecor_9" x="360" y="2840" w="89" h="60" xo="0" yo="0" id="10001113" name="inst_FE01CBEF" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_forestDecor_9" x="340" y="540" w="89" h="60" xo="0" yo="0" id="10001114" name="inst_4217A3B8" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_forestDecor_9" x="200" y="2260" w="89" h="60" xo="0" yo="0" id="10001115" name="inst_14D3B2C7" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_forestDecor_10" x="280" y="2080" w="55" h="40" xo="0" yo="0" id="10001124" name="inst_DD850E94" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_forestDecor_10" x="460" y="1540" w="55" h="40" xo="0" yo="0" id="10001125" name="inst_B6C478D5" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_forestDecor_11" x="20" y="640" w="38" h="40" xo="0" yo="0" id="10001126" name="inst_2027844F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_forestDecor_11" x="520" y="2800" w="38" h="40" xo="0" yo="0" id="10001127" name="inst_2351C627" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_forestDecor_10" x="500" y="2520" w="55" h="40" xo="0" yo="0" id="10001128" name="inst_04049F7F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_mainForestDecor_0" x="100" y="360" w="20" h="20" xo="0" yo="0" id="10000532" name="inst_76E861D9" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_mainForestDecor_0" x="120" y="360" w="20" h="20" xo="0" yo="0" id="10000533" name="inst_2050A368" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_mainForestDecor_0" x="140" y="360" w="20" h="20" xo="0" yo="0" id="10000534" name="inst_274D66E0" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -324,6 +333,10 @@ instance_create(x,y,obj_fadeOutElevator);</code>
     <tile bgName="bg_mainForestDecor_0" x="200" y="3500" w="20" h="20" xo="0" yo="0" id="10000698" name="inst_090ED513" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_mainForestDecor_0" x="220" y="3500" w="20" h="20" xo="0" yo="0" id="10000699" name="inst_2A5E7C07" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_mainForestDecor_0" x="240" y="3500" w="20" h="20" xo="0" yo="0" id="10000700" name="inst_1CD5B847" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_mainForestDecor_0" x="460" y="1560" w="20" h="20" xo="0" yo="0" id="10001129" name="inst_9E378873" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_mainForestDecor_0" x="480" y="1560" w="20" h="20" xo="0" yo="0" id="10001130" name="inst_8AB17EAB" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_mainForestDecor_0" x="500" y="1560" w="20" h="20" xo="0" yo="0" id="10001131" name="inst_8AA35360" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_mainForestDecor_0" x="520" y="1560" w="20" h="20" xo="0" yo="0" id="10001132" name="inst_8FAAE606" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
